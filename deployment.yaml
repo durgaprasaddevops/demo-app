@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: mydeployment
+spec:
+ strategy:
+   type: RollingUpdate / Recreate
+ replicas: 10
+ selector:
+   matchLabels:
+     app: frontend
+ template:
+   metadata:
+    name: myPod
+    labels:
+      app: frontend
+   spec:
+    containers:
+    - name: myweb
+      image: durgaprasadtibco/jenkinsimage:v1
+      ports:
+      - containerPort: 80
