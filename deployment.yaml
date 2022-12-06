@@ -4,8 +4,8 @@ metadata:
  name: mydeployment
 spec:
  strategy:
-   type: RollingUpdate / Recreate
- replicas: 10
+   type: RollingUpdate
+ replicas: 2
  selector:
    matchLabels:
      app: frontend
