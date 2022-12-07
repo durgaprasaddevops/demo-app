@@ -17,6 +17,7 @@ spec:
    spec:
     containers:
     - name: myweb
+      imagePullPolicy: Always
       image: durgaprasadtibco/jenkinsimage:v1
       ports:
       - containerPort: 80
